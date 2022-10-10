@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 18.8.0
-
+          
       - name: Setup yarn
         run: npm install yarn@1.22.19 -g
         
@@ -34,8 +34,8 @@ jobs:
         
       - name: Display Build Version
         run: |
-        echo "Build version: ${{ steps.gitversion.outputs.semVer }}"
-        echo "${{ steps.gitversion.outputs.semVer }}" > ./Source/Frontend/public/version.txt
+          echo "Build version: ${{ steps.gitversion.outputs.semVer }}"
+          echo "${{ steps.gitversion.outputs.semVer }}" > ./Source/Frontend/public/version.txt
         
       - name: Install and Build 🔧
         run: |
